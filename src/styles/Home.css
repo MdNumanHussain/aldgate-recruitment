@@ -7,14 +7,19 @@
     align-items: center;
     justify-content: space-between;
     padding: 100px 10%; /* Increased padding for spacing */
-    background: #021B39; /* Deep Navy Blue - More Professional */
+    background: url('../images/hospitality.png') no-repeat center center; /* Deep Navy Blue - More Professional */
     color: white;
     position: relative;
+
 }
 
 /* Left Side Content */
 .about-content {
     max-width: 50%;
+    background-color: #070707 ;
+    opacity: 60%;
+    border-radius: 50px;
+    padding: 20px;
 }
 
 /* Styled Heading (Gradient Text for Impact) */
@@ -103,7 +108,7 @@
     position: relative;
     width: 420px;  /* Bigger Size */
     height: 420px; /* Bigger Size */
-    background: #1A2748; /* Dark Blue for contrast */
+    background: #d5dbe9; /* Dark Blue for contrast */
     border-radius: 30px;
     display: flex;
     align-items: center;
@@ -166,7 +171,7 @@
    THIRD SECTION (DARK BACKGROUND)
    ============================ */
    .third-section {
-    background: #0c0101;
+    background: black;
     color: white;
     padding: 80px 10%;
     display: flex;

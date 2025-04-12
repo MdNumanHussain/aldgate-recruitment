@@ -13,6 +13,7 @@ const Home = () => {
     <div className="home">
       {/* About Us Section */}
       <section className="about-us-section">
+     
         {/* Left Side - Text Content */}
         <div className="about-content">
           <h1 className="styled-heading">
@@ -33,14 +34,7 @@ const Home = () => {
         </div>
 
         {/* Right Side - Lottie Animation */}
-        <div className="about-animation">
-          <Lottie
-            animationData={aboutUsAnimation}
-            loop={true}
-            autoplay={true}
-            style={{ width: "300px", height: "300px" }}
-          />
-        </div>
+        
       </section>
 
 
@@ -80,22 +74,22 @@ const Home = () => {
           <div className="third-features">
             <div className="feature-card">
               <i className="fas fa-brain"></i>
-              <h4>Smart Skills</h4>
+              <h4 id="housekeeping">Housekeeping</h4>
               <p>Expert hiring strategies with AI-powered insights.</p>
             </div>
             <div className="feature-card">
               <i className="fas fa-shipping-fast"></i>
-              <h4>Fast Delivery</h4>
+              <h4>Food & Bevarage</h4>
               <p>Quick hiring process with high-quality candidates.</p>
             </div>
             <div className="feature-card">
               <i className="fas fa-star"></i>
-              <h4>Best Practices</h4>
+              <h4>Back of House</h4>
               <p>Industry-standard hiring methods and processes.</p>
             </div>
             <div className="feature-card">
               <i className="fas fa-shield-alt"></i>
-              <h4>Trusted Network</h4>
+              <h4>Concierge</h4>
               <p>Connecting you with a verified talent pool.</p>
             </div>
           </div>
