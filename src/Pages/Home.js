@@ -19,10 +19,10 @@ function Home() {
 {/* ===== Section-1 ===== */}
 <section className="section-1">
   <div className="section-1-overlay">
-
     <div className="section-1-grid">
       {/* Left - Company Description */}
       <div className="section-box left-box">
+        <img src={require('../Images/aldgaterecruitment.png')} alt="Aldgate Recruitment" className="section-icon" />
         <h2>Aldgate Recruitment</h2>
         <p>
           We connect top-tier hospitality talent with London’s finest hotels,
@@ -32,6 +32,7 @@ function Home() {
 
       {/* Middle - Find Work */}
       <div className="section-box middle-box">
+        <img src={require('../Images/searchjobs.png')} alt="Find Work" className="section-icon" />
         <h3>Find Work</h3>
         <p>Join a team that values your skills. Apply now for flexible, high-quality hospitality jobs.</p>
         <button className="btn btn-yellow">Start Job Search</button>
@@ -39,14 +40,15 @@ function Home() {
 
       {/* Right - Recruit Staff */}
       <div className="section-box right-box">
+        <img src={require('../Images/recruitstaffs.png')} alt="Recruit Staff" className="section-icon" />
         <h3>Recruit Staff</h3>
         <p>Need top-tier, vetted hospitality professionals? We deliver the right talent, fast.</p>
         <button className="btn btn-light">Request Staff</button>
       </div>
     </div>
-
   </div>
 </section>
+
 
 {/* ===== Section-2 ===== */}
 <section className="section-2">
@@ -238,21 +240,37 @@ function Home() {
 
 
 
+{/* ===== Section-5: Meet Our Directors ===== */}
 
-      {/* ===== Meet Our Team ===== */}
-      <section className="our-team">
-        <h2>Meet Our Directors</h2>
-        <div className="team-grid">
-          <div className="member">Abu Naser - Director</div>
-          <div className="member">Anjalee Fernandez - Director</div>
-        </div>
-      </section>
+<section className="section-5">
+  <h2 className="section-5-title">Meet Our Directors</h2>
+  <div className="section-5-grid">
+    <div className="director-card">
+      <img src={require("../Images/director1.png")} alt="Abu Naser" />
+      <h3>Abu Naser</h3>
+      <p className="role">Director</p>
+      <p className="quote">Good life begins with good Company.</p>
+    </div>
+    <div className="director-card">
+      <img src={require("../Images/director2.png")} alt="Anjalee Fernandez" />
+      <h3>Anjalee Fernandez</h3>
+      <p className="role">Director</p>
+      <p className="quote">Growing a business means having the right people in your team.</p>
+    </div>
+  </div>
+</section>
 
-      {/* ===== Call To Action ===== */}
-      <section className="call-to-action">
-        <h2>Looking to Hire or Get Hired?</h2>
-        <button>Contact Us</button>
-      </section>
+
+
+{/* ===== Section-6: Call To Action ===== */}
+<section className="section-6">
+  <div className="cta-content">
+    <h2>Looking to Hire or Get Hired?</h2>
+    <p>We’re here to help you find the right opportunity or talent. Let’s talk today.</p>
+    <button className="cta-button">Contact Us</button>
+  </div>
+</section>
+
 
     </div>
   );
