@@ -9,6 +9,8 @@ import cleanerImage from '../Images/cleaner.png';
 
 function Home() {
   const [showCleaner, setShowCleaner] = useState(false);
+  const [activeTab, setActiveTab] = useState(0);
+
   return (
     <div className="home">
 
@@ -46,6 +48,15 @@ function Home() {
   </div>
 </section>
 
+{/* ===== Section-2 ===== */}
+<section className="section-2">
+  <div className="section-2-content">
+    <h2>Aldgate offers more than just recruitment</h2>
+    <button className="section-2-btn">
+      Learn more <span className="arrow">→</span>
+    </button>
+  </div>
+</section>
 
 {/* ===== Section-3 ===== */}
 <section className="section-3">
@@ -106,6 +117,126 @@ function Home() {
 
   <button className="aldgate-btn">Work with Aldgate Recruitment</button>
 </section>
+
+{/* ===== Section-4 ===== */}
+<section className="section-4">
+  <div className="section-4-container">
+    {/* Left Buttons */}
+    <div className="section-4-sidebar">
+      {[
+        "Why Choose Us",
+        "What We Offer",
+        "What We Cover",
+        "What We Service",
+        "Find Work",
+        "Recruit Staff"
+      ].map((item, index) => (
+        <button
+          key={index}
+          className={`section-4-btn ${activeTab === index ? "active" : ""}`}
+          onClick={() => setActiveTab(index)}
+        >
+          {item}
+        </button>
+      ))}
+    </div>
+
+    {/* Right Content */}
+    <div className="section-4-content">
+      {activeTab === 0 && (
+        <div className="section-boxed">
+          <img src={require("../Images/whyus.png")} alt="Why Us" />
+          <h2>Why Choose Us</h2>
+          <p>We build trusted partnerships through consistency, quality, and speed of service.</p>
+          <ul>
+            <li> Trusted by top hospitality groups</li>
+            <li> Reliable staff on short notice</li>
+            <li> Quality-focused recruitment</li>
+            <li> Onboarding and support systems</li>
+          </ul>
+          <div className="section-buttons">
+            <button className="section-act-btn yellow">Find Job</button>
+            <button className="section-act-btn dark">Recruit Staff</button>
+          </div>
+        </div>
+      )}
+
+      {activeTab === 1 && (
+        <div className="section-boxed">
+          <img src={require("../Images/weoffer.png")} alt="We Offer" />
+          <h2>What We Offer</h2>
+          <p>We deliver staffing, training, and consultancy tailored for every venue type.</p>
+          <ul>
+            <li> Temporary and full-time placements</li>
+            <li> Bespoke training services</li>
+            <li> One-on-one client consultancy</li>
+            <li> Flexible shift fulfillment</li>
+          </ul>
+        </div>
+      )}
+
+      {activeTab === 2 && (
+        <div className="section-boxed">
+          <img src={require("../Images/wecover.png")} alt="We Cover" />
+          <h2>What We Cover</h2>
+          <p>Roles we support across front-of-house and back-of-house operations:</p>
+          <ul>
+            <li> Waiters & Waitresses</li>
+            <li> Banqueting Porters</li>
+            <li> Public Area Cleaners</li>
+            <li> Chefs & Stewards</li>
+          </ul>
+        </div>
+      )}
+
+      {activeTab === 3 && (
+        <div className="section-boxed">
+          <img src={require("../Images/whatweservice.png")} alt="We Service" />
+          <h2>What We Service</h2>
+          <p>Industries and environments we supply professional talent to:</p>
+          <ul>
+            <li> Luxury hotels and fine dining</li>
+            <li> Private events & weddings</li>
+            <li> Catering companies</li>
+            <li> Chain restaurants and pubs</li>
+          </ul>
+        </div>
+      )}
+
+      {activeTab === 4 && (
+        <div className="section-boxed">
+          <img src={require("../Images/findjob.png")} alt="Find Work" />
+          <h2>Find Work</h2>
+          <p>Apply for roles that match your skills, flexibility, and goals. Start earning now.</p>
+          <ul>
+            <li> Flexible shifts and locations</li>
+            <li> Instant shift notifications</li>
+            <li> Weekly pay and fair rates</li>
+            <li> Training and onboarding</li>
+          </ul>
+          <button className="section-act-btn yellow">Start Job Search</button>
+        </div>
+      )}
+
+      {activeTab === 5 && (
+        <div className="section-boxed">
+          <img src={require("../Images/findstaff.png")} alt="Find Staff" />
+          <h2>Recruit Staff</h2>
+          <p>We connect you with experienced, vetted, and ready-to-work hospitality staff.</p>
+          <ul>
+            <li> Last-minute coverage</li>
+            <li> On-demand support 24/7</li>
+            <li> Chefs, servers, baristas, stewards</li>
+            <li> Staff replacement guarantee</li>
+          </ul>
+          <button className="section-act-btn dark">Request Staff</button>
+        </div>
+      )}
+    </div>
+  </div>
+</section>
+
+
 
 
       {/* ===== Meet Our Team ===== */}
