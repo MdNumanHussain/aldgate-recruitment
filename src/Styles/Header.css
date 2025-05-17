@@ -8,7 +8,25 @@ body.light {
     background-color: #1e1e1e;
     color: #f5f5f5;
   }
-  
+.logo-icon {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  padding: 6px;
+  background-color: white; /* helps visibility in dark mode */
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.logo-icon:hover {
+  transform: scale(1.05);
+}
+
+body.dark .logo-icon {
+  background-color: #f9f9f9;
+}
+
   /* Header container */
   .header {
     background: white;

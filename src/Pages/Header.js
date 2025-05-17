@@ -1,15 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import '../Styles/Header.css';
 import { useNavigate } from 'react-router-dom';
+import logo from '../Images/logo.png';
 
 
+import { FaHome, FaUserTie, FaUserCheck, FaHandshake, FaPhone } from 'react-icons/fa';
+
+// 👇 Updated section array with icons instead of emoji
 const sections = [
-  { id: 'home', label: '🏠 Home' },
-  { id: 'about', label: 'ℹ️ About Us' },
-  { id: 'services', label: '⚙️ Our Services' },
-  { id: 'why-us', label: '🤝 Why Choose Us' },
-  { id: 'contact', label: '📞 Contact' },
+  { id: 'home', label: <><FaHome /> Home</> },
+  { id: 'about', label: <><FaUserTie /> About Us</> },
+  { id: 'recruit', label: <><FaUserCheck /> Recruit Staff</> },
+  { id: 'agency', label: <><FaHandshake /> Agency Work</> },
+  { id: 'contact', label: <><FaPhone /> Contact</> },
 ];
+
+
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -51,7 +57,10 @@ function Header() {
   return (
     <header className="header">
       <div className="nav-container">
-      <div className="logo">Aldgate <span className="dot">Recruitment</span></div>
+      <div className="logo">
+  <img src={logo} alt="Logo" className="logo-icon" />
+</div>
+
 
 
         <div className="menu-toggle" onClick={toggleMenu}>
